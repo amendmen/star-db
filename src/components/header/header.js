@@ -2,25 +2,30 @@ import React from 'react';
 
 import './header.css';
 
-const Header = () => {
+const Header = ({ onServiceChange }) => {
   return (
     <div className="header d-flex">
-      {/* <h3>
-        <a >
-          Star DB
+      <h3>
+        <a href="#/">
+          StarDB
         </a>
       </h3>
       <ul className="d-flex">
         <li>
-          <a >People</a>
+          <a href="#/people">People</a>
         </li>
         <li>
-          <a >Planets</a>
+          <a href="#/planets">Planets</a>
         </li>
         <li>
-          <a >Starships</a>
+          <a href="#/starships">Starships</a>
         </li>
-      </ul> */}
+      </ul>
+      <button 
+      onClick={onServiceChange}
+      className="btn btn-primary btn-sm">
+        Change service
+        </button>
     </div>
   );
 };
